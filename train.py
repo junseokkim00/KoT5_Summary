@@ -31,8 +31,8 @@ class ArgsBase():
     def add_model_specific_args(parent_parser):
         parser = argparse.ArgumentParser(parents=[parent_parser], add_help=False)
 
-        parser.add_argument("--train_file", type=str, default='./train_data_text_summarization/data/train/train.json',help='train file')
-        parser.add_argument('--test_file', type=str, default='./train_data_text_summarization/data/test/test.json', help='test file')
+        parser.add_argument("--train_file", type=str, default='./data/train/train.json',help='train file')
+        parser.add_argument('--test_file', type=str, default='./data/test/test.json', help='test file')
         parser.add_argument('--batch_size', type=int, default=28, help='batch size')
         parser.add_argument('--checkpoint', type=str, default='checkpoint', help='checkpoint')
         parser.add_argument('--max_len', type=int, default=512, help='max length')
