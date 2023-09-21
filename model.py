@@ -59,7 +59,7 @@ class KoT5ConditionalGeneration(L.LightningModule):
         loss = outs.loss
         self.log('train_loss', loss, prog_bar=True)
         return loss
-    def validation_step(self, batch, batch_idx, dataloader_idx):
+    def validation_step(self, batch, batch_idx, dataloader_idx=0):
         outs = self(batch)
         loss = outs['loss']
         self.outputs[dataloader_idx].append({"loss": loss})
