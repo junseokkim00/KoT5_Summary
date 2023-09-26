@@ -40,7 +40,7 @@ class KoT5SummaryDataset(Dataset):
         input_ids = self.add_padding_data(input_ids)
         label_ids = self.tokenizer.encode(df['summary'])
         label_ids.append(self.tokenizer.eos_token_id)
-        dec_input_ids = [self.tokenizer.bos_token_id]
+        dec_input_ids = [self.tokenizer.eos_token_id]
         dec_input_ids += label_ids[:-1]
         dec_input_ids = self.add_padding_data(dec_input_ids)
         label_ids = self.add_ignored_data(label_ids)
