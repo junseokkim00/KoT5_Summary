@@ -1,3 +1,0 @@
-data.zip filter=lfs diff=lfs merge=lfs -text
-base_model.zip filter=lfs diff=lfs merge=lfs -text
-tokenizer_pretrained.zip filter=lfs diff=lfs merge=lfs -text
